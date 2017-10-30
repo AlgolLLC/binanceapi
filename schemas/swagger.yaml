@@ -17,3 +17,7 @@ paths:
 			description: Test connectivity to the REST API
 			produces:
 				- application/json
+			responses:
+				200:
+					description: OK
+				
