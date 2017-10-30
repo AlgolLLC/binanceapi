@@ -20,4 +20,14 @@ paths:
 			responses:
 				200:
 					description: OK
-				
+					schema:
+						type: object
+						properties:
+							code:
+								type: integer
+								required: false
+								example: -1121
+							msg:
+								type: string
+								required: false
+								example: "Invalid symbol"
