@@ -1,0 +1,19 @@
+---
+swagger: "2.0"
+info:
+	title: Binance REST API
+	description: Schema for the binance REST API
+	version: 0.0.1
+	
+host: www.binance.com
+basePath: /api
+schemes:
+	- https
+
+paths:
+	/v1/ping:
+		get:
+			summary: Test connectivity
+			description: Test connectivity to the REST API
+			produces:
+				- application/json
