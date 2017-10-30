@@ -14,7 +14,7 @@ paths:
 	/v1/ping:
 		get:
 			summary: Test connectivity
-			description: Test connectivity to the REST API
+			description: Test connectivity to the Rest API
 			produces:
 				- application/json
 			responses:
@@ -31,3 +31,26 @@ paths:
 								type: string
 								required: false
 								example: "Invalid symbol"
+	/v1/time:
+		get:
+			summary: Check server time
+			description: Test connectivity to the Rest API and get the current server time.
+			produces:
+				- application/json
+			responses:
+				200:
+					description: OK
+					schema:
+						type: object
+						properties:
+							code:
+								type: integer
+								required: false
+								example: -1121
+							msg:
+								type: string
+								required: false
+								example: "Invalid symbol"
+							serverTime:
+								type: integer
+								example: 1499827319559
