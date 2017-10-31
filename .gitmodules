@@ -1,3 +1,6 @@
 [submodule "clients/binance-javascript"]
 	path = clients/binance-javascript
 	url = git@github.com:AlgolLLC/binance-javascript.git
+[submodule "clients/binance-python"]
+	path = clients/binance-python
+	url = https://github.com/AlgolLLC/binance-python.git
