@@ -23,11 +23,9 @@ paths:
                         properties:
                             code:
                                 type: integer
-                                required: false
                                 example: -1121
                             msg:
                                 type: string
-                                required: false
                                 example: "Invalid symbol"
     /v1/time:
         get:
@@ -40,14 +38,14 @@ paths:
                     description: OK
                     schema:
                         type: object
+                        required:
+                            - serverTime
                         properties:
                             code:
                                 type: integer
-                                required: false
                                 example: -1121
                             msg:
                                 type: string
-                                required: false
                                 example: "Invalid symbol"
                             serverTime:
                                 type: integer
