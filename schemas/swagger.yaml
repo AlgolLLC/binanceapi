@@ -38,8 +38,6 @@ paths:
                     description: OK
                     schema:
                         type: object
-                        required:
-                            - serverTime
                         properties:
                             code:
                                 type: integer
@@ -50,3 +48,36 @@ paths:
                             serverTime:
                                 type: integer
                                 example: 1499827319559
+                                
+    /v1/depth:
+        get:
+            summary: Order book
+            parameters:
+                - in: query
+                  name: symbol
+                  type: string
+                  required: true
+                - in: query
+                  name: limit
+                  type: integer
+            produces:
+                - application/json
+            responses:
+                200:
+                    description: OK
+                    schema:
+                        type: object
+                        properties:
+                            lastUpdateId:
+                                type: integer
+                                example: 1027024
+                            bids:
+                                type: array
+                            asks:
+                                type: array
+                            code:
+                                type: integer
+                                example: -1121
+                            msg:
+                                type: string
+                                example: "Invalid symbol"
