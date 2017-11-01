@@ -74,8 +74,12 @@ paths:
                                 example: 1027024
                             bids:
                                 type: array
+                                items:
+                                    type: string
                             asks:
                                 type: array
+                                items:
+                                    type: string
                             code:
                                 type: integer
                                 example: -1121
@@ -114,38 +118,39 @@ paths:
                 200:
                     description: OK
                     schema:
-                        type: object
-                        properties:
-                            a:
-                                type: integer
-                                description: Aggregate tradeId
-                                example: 26129
-                            p:
-                                type: string
-                                description: Price
-                                example: "0.01633102"
-                            q:
-                                type: string
-                                description: Quantity
-                                example: "4.70443515"
-                            f:
-                                type: integer
-                                description: First tradeId
-                                example: 27781
-                            l:
-                                type: integer
-                                description: Last tradeId
-                                example: 27781
-                            T:
-                                type: integer
-                                description: Timestamp
-                                example: 1498793709153
-                            m:
-                                type: boolean
-                                description: Was the buyer the maker?
-                                example: true
-                            M:
-                                type: boolean
-                                description: Was the trade the best price match?
-                                example: true
-
+                        type: array
+                        items:
+                            type: object
+                            properties:
+                                a:
+                                    type: integer
+                                    description: Aggregate tradeId
+                                    example: 26129
+                                p:
+                                    type: string
+                                    description: Price
+                                    example: "0.01633102"
+                                q:
+                                    type: string
+                                    description: Quantity
+                                    example: "4.70443515"
+                                f:
+                                    type: integer
+                                    description: First tradeId
+                                    example: 27781
+                                l:
+                                    type: integer
+                                    description: Last tradeId
+                                    example: 27781
+                                T:
+                                    type: integer
+                                    description: Timestamp
+                                    example: 1498793709153
+                                m:
+                                    type: boolean
+                                    description: Was the buyer the maker?
+                                    example: true
+                                M:
+                                    type: boolean
+                                    description: Was the trade the best price match?
+                                    example: true
